@@ -39,6 +39,8 @@ jobs:
           tags:
             ${{ secrets.DOCKER_HUB_USERNAME }}/awscli:${{ env.TAG }}
             ${{ secrets.DOCKER_HUB_USERNAME }}/awscli:latest
+        env:
+          TAG: 1.27.0
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
