@@ -36,7 +36,7 @@ jobs:
           context: .
           file: Dockerfile
           push: true
-          tags:
+          tags: |
             ${{ secrets.DOCKERHUB_USERNAME }}/awscli:${{ env.TAG }}
             ${{ secrets.DOCKERHUB_USERNAME }}/awscli:latest
         env:
